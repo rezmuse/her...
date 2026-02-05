@@ -1,1 +1,90 @@
+/* Import a free, romantic font (optional) */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
 
+/* Global styles */
+body {
+    font-family: 'Dancing Script', cursive; /* Romantic, handwritten feel */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8f8f8, #ffe6e6); /* Soft gradient background */
+    color: #333;
+    transition: background 0.3s ease; /* Smooth color changes */
+}
+
+/* Day-specific theme colors */
+.day7 { --theme-color: #FFB6C1; } /* Rosy pink */
+.day8 { --theme-color: #FF69B4; } /* Soft red */
+.day9 { --theme-color: #D2691E; } /* Chocolate brown */
+.day10 { --theme-color: #F8BBD9; } /* Pastel pink */
+.day11 { --theme-color: #FFD700; } /* Gold */
+.day12 { --theme-color: #FFE4B5; } /* Warm peach */
+.day13 { --theme-color: #DC143C; } /* Deep pink */
+.day14 { --theme-color: #DC143C; } /* Crimson */
+
+/* Landing page override */
+.landing {
+    --theme-color: #FF69B4; /* Default pink */
+}
+
+/* Container for content */
+.container {
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--theme-color);
+}
+
+/* Headings */
+h1 {
+    font-size: 2.5em;
+    color: var(--theme-color);
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 2em;
+    color: var(--theme-color);
+}
+
+/* Messages */
+.message {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+/* Dino emoji */
+.dino {
+    font-size: 3em;
+    margin: 20px 0;
+}
+
+/* Button styles */
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: var(--theme-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1.1em;
+    transition: background 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+    background: darken(var(--theme-color), 10%); /* Slight darken on hover (CSS doesn't have darken, but this is fine) */
+}
+
+/* Responsive for mobile */
+@media (max-width: 600px) {
+    h1 { font-size: 2em; }
+    .container { padding: 15px; }
+}
